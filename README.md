@@ -88,8 +88,53 @@ If you are developing a production application, we recommend updating the config
 
       npm install react-router-dom
 
+- Routes let us have multiple pages in our single page application
+- Gives the user the illusion that these pages are loading for the first time
+- Let us add the following files in our application
+    - /src/containers/Home.jsx
+    - /src/containers/Page1.jsx
+    - /src/containers/Page2.jsx
 
+- Add the following code in Home.jsx:
 
+  import React from 'react';
+  import {Link} from "react-router-dom";
+
+        const Home = () => {
+        return (
+            <div style={{justifyContent: 'center'}}>
+                <h2>Home Page</h2>
+                <div>
+                    <Link to={"/"}>
+                        <button>
+                            Home
+                        </button>
+                    </Link>
+                    <Link to={"/page1"}>
+                        <button>
+                            Page1
+                        </button>
+                    </Link>
+                    <Link to={"/page2"}>
+                        <button>
+                            Page2
+                        </button>
+                    </Link>
+                </div>
+            </div>
+            );
+        };
+        
+        export default Home;
+
+## Section 8: Styling and MUI
+
+- We can adjust style using css files
+- CSS can be governed within the application itself
+- There are pros and cons to each approach
+- Best practice is to reuse CSS via classes within your CSS files
+
+- Notice that there is an App.css file
 
 
 
