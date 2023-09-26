@@ -71,6 +71,7 @@ If you are developing a production application, we recommend updating the config
 
 - SPA: Single Page Application
 - Website that loads the content once
+- Many famous websites are built via SPA using React [Shopify](https://www.shopify.com/)
 
 
 ## Section 6: Stateful Application
@@ -127,14 +128,28 @@ If you are developing a production application, we recommend updating the config
         
         export default Home;
 
+- In App.tsx, let us add the following code:
+
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<Home/>} />
+                <Route path="/page1" element={<Page1/>} />
+                <Route path="/page2" element={<Page2/>} />
+            </Routes>
+        </Router>
+
 ## Section 8: Styling and MUI
 
 - We can adjust style using css files
 - CSS can be governed within the application itself
 - There are pros and cons to each approach
 - Best practice is to reuse CSS via classes within your CSS files
-
 - Notice that there is an App.css file
+
+- Luckily, there exists some libraries such as Material UI to help us [Link](https://mui.com/material-ui/getting-started/installation/)
+  
+      npm install @mui/material @emotion/react @emotion/styled
+
 
 
 

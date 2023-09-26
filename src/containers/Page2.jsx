@@ -1,6 +1,7 @@
 // src/containers/Home.jsx
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Button} from "@mui/material";
 
 const Page2 = () => {
     return (
@@ -8,9 +9,9 @@ const Page2 = () => {
             <h2>Page 2</h2>
             <div>
                 <Link to={"/"}>
-                    <button>
+                    <Button variant="contained">
                         Home
-                    </button>
+                    </Button>
                 </Link>
                 <Link to={"/page1"}>
                     <button>
