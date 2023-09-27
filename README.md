@@ -82,6 +82,7 @@ If you are developing a production application, we recommend updating the config
    - Props are similar to arguments in a function
    - State is more like a components memory
 - Always think about where your state should live
+- Counter Example
 
 ## Section 7: Routing
 
@@ -150,6 +151,53 @@ If you are developing a production application, we recommend updating the config
   
       npm install @mui/material @emotion/react @emotion/styled
 
+- Lets go ahead and change the button component in the Home.tsx file to
+      
+      Before <button></button>
+  
+      After: <Button variant="contained"></Button>
 
 
+## Section 9: State and Components with DateTime
+
+- Components are useful because they are easy to recycle
+- A feature that will be used in multiple places should be abstracted as a component
+- Components can be imported multiple times
+
+- Let us go ahead and create a DateTime component, which we will place in the components section
+- Add the following code in that new page:
+  
+      import  React, { useState , useEffect } from 'react'
+      
+      export const DateTime = () => {
+      
+          let [date,setDate] = useState(new Date());
+      
+          useEffect(() => {
+              let timer = setInterval(()=>setDate(new Date()), 1000 )
+              return function cleanup() {
+                  clearInterval(timer)
+              }
+      
+          });
+      
+          return(
+              <div>
+                  <p> Time : {date.toLocaleTimeString()}</p>
+                  <p> Date : {date.toLocaleDateString()}</p>
+              </div>
+          )
+      }
+      
+      export default DateTime
+
+- We can import that code as showed in App.tsx
+
+## Section 10: API Calls within React
+
+- You will often need to fetch data from external sources like databases
+- We can use 'fetch' to make get requests
+- We will accomplish this using useEffect hooks
+- Effect hooks let us perform side effects in functional components
+- Let us try to fetch some sample data from here [Link](https://jsonplaceholder.typicode.com/posts)
 

@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-do
 import Home from './containers/Home';
 import Page1 from './containers/Page1';
 import Page2 from './containers/Page2';
-
+import DateTime from './components/DateTime'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,6 +15,7 @@ function App() {
 
         <Router>
             {/*<MenuAppBar/>*/}
+            <DateTime/>
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route path="/page1" element={<Page1/>} />
