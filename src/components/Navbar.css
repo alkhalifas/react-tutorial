@@ -4,14 +4,21 @@
     justify-content: space-between;
 }
 
-.navbar-logo {
-    fontFamily: 'Helvetica';
-    fontWeight: 700;
-    padding-left: 1%;
-    color: inherit;
-    textDecoration: 'none';
+.navbar-left {
+    display: flex;
+    align-items: center;
 }
 
-.spacer {
-    flex: 1; /* Spacer takes available space in the middle */
+.navbar-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: white;
 }
