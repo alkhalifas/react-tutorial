@@ -1,0 +1,17 @@
+/* Navbar.css */
+.navbar-toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    fontFamily: 'Helvetica';
+    fontWeight: 700;
+    padding-left: 1%;
+    color: inherit;
+    textDecoration: 'none';
+}
+
+.spacer {
+    flex: 1; /* Spacer takes available space in the middle */
+}

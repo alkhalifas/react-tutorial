@@ -1,43 +1,44 @@
-import  React, { useState , useEffect } from 'react'
-import {AppBar, Container, Toolbar, Typography} from "@mui/material";
+import React, { useState, useEffect } from 'react';
+import {AppBar, Button, Container, Toolbar, Typography} from '@mui/material';
+import './Navbar.css'; // Import the CSS file for Navbar styles
+import SmartDisplayIcon from '@mui/icons-material/SmartDisplay';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export const Navbar = () => {
-
-    let [username, setUsername] = useState("alkhalifas");
+    let [username, setUsername] = useState('alkhalifas');
 
     useEffect(() => {
-
-
+        // Your useEffect logic here
     });
 
-    return(
+    return (
         <div>
             <AppBar position="static">
                 <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-
+                    <Toolbar disableGutters className="navbar-toolbar">
+                        <SmartDisplayIcon/>
                         <Typography
                             variant="h6"
                             noWrap
                             component="a"
-                            href="#app-bar-with-responsive-menu"
-                            sx={{
-                                mr: 2,
-                                display: { xs: 'none', md: 'flex' },
-                                fontFamily: 'Helvetica',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
-                            }}
+                            href="/"
+                            className="navbar-logo"
                         >
                             My Company
                         </Typography>
+                        <div className="spacer"></div>
+                        <Typography className="navbar-username">{username}</Typography>
+                        <Button>
+                            <AccountCircleIcon
+                                style={{"color": "white", "fontSize":"large"}}
+                            />
+                        </Button>
+
                     </Toolbar>
                 </Container>
             </AppBar>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
