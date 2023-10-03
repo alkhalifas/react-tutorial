@@ -8,7 +8,7 @@ import Page1 from './containers/Page1';
 import Page2 from './containers/Page2';
 import DateTime from './components/DateTime'
 import Navbar from './components/Navbar'
-
+import NotFound from "./containers/NotFound"
 function App() {
   const [count, setCount] = useState(0)
 
@@ -22,8 +22,8 @@ function App() {
                 <Route exact path="/" element={<Home/>} />
                 <Route path="/page1" element={<Page1/>} />
                 <Route path="/page2" element={<Page2/>} />
-                {/*<Route path="/404" element={<NotFound/>} />*/}
-                {/*<Route path="*" element={<Navigate replace to="/404" />} />*/}
+                <Route path="/404" element={<NotFound/>} />
+                <Route path="*" element={<Navigate replace to="/404" />} />
             </Routes>
             {/*<Footer/>*/}
         </Router>

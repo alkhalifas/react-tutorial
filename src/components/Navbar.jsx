@@ -42,7 +42,7 @@ export const Navbar = () => {
                         </div>
 
                         <div className="navbar-center">
-                            <Button component={Link} to="/home" color="inherit">
+                            <Button component={Link} to="/" color="inherit">
                                 Home
                             </Button>
                             <Button component={Link} to="/page1" color="inherit">
